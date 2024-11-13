@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Varnish authentication example</title>
+    </head>
+    <body>
+        <h1>Varnish authentication example</h1>
+        <p>
+            This is an example of how varnish can be configured to call an authentication
+            url on requests that are to be secure and still cachable. 
+        </p>
+        <h2>Authentication calls</h2>
+        <p>
+            The authentication request is just /authentication.html which always returns 200. 
+            The protected but cachable resource is <a href="secure.html">secure</a> and in the access log you should
+            see a call to authentication.html every time there is a call to secure.html, but the response
+            isn't cached.
+        </p>
+        <h2>Authenticated calls - cached</h2>
+        <p>
+            The calls to <a href="secure_cached.html">Secure Cached</a> is doing the same as above, but the response is cached which you 
+            should see on the x-cache header in the response.
+        </p>
+        <h2>Unauthenticated calls cached and not cached</h2>
+        <p>
+            This is standard varnish, but calls to <a href="unsecure.html">Unsecure</a> are not cached and <a href="unsecure_cached.html">Unsecure cached</a> are 
+            cached. Both are not requirering authentication calls.
+        </p>
+        <h2>Note!</h2>
+        <p> 
+            When accessing this directly in nginx all requests are uncached and unsecure!
+        </p>
+    </body>
+</html>
