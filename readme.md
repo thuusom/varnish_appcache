@@ -187,6 +187,12 @@ File: `default.vcl`
   - Adds the `X-Cache` header to indicate caching status.
   - Restarts requests with proper authentication if needed.
 
+#### More
+
+Read more on the flow between these methods in this tutorial on vcl:
+
+[![VCL flows](https://www.varnish-software.com/developers/images/tutorials/varnish-finite-state-machine.svg)](https://www.varnish-software.com/developers/tutorials/varnish-configuration-language-vcl/)
+
 ---
 
 ## References
