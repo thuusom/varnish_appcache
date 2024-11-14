@@ -74,7 +74,7 @@ Run the following script to start the NGINX backend:
 
 This script:
 - Stops and removes any existing NGINX container.
-- Starts a new NGINX container named `nginx-cryptoguard`.
+- Starts a new NGINX container named `nginx-server`.
 - Maps port 9080 on the host to port 80 in the container.
 - Mounts `html/` and `nginx.conf` into the container.
 
